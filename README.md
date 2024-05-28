@@ -8,6 +8,9 @@ Chess Game Simulation: Play against the AI in a command-line interface.
 MCTS Implementation: Uses an MCTS algorithm to explore potential moves.
 Neural Network Evaluation: Utilizes a simple neural network to evaluate board states, initially with random weights.
 
+
 Neural Network architecture: MLP -> input: 768 | hidden: 256 | hidden: 64 | output: 3
+
 Optimizer: Adam
+
 NO TRAINING DATA - Monte Carlo Search Probabilities ONLY 
