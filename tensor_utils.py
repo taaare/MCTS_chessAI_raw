@@ -43,13 +43,16 @@ def train_network(net, training_data, epochs=5):
         total_loss = 0
         for board_tensor, result in training_data:
             optimizer.zero_grad()
+            if isinstance(board_tensor, tuple):
+                board_tensor = board_tensor[0]  # Ensure board_tensor is a tensor, not a tuple
             prediction = net(board_tensor)
-            target = torch.tensor([result], dtype=torch.float32)
+            target = torch.tensor([result], dtype=torch.float32).view(-1, 1)  # Ensure target is the same shape as prediction
             loss = criterion(prediction, target)
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
         print(f'Epoch {epoch + 1}, Loss: {total_loss / len(training_data)}')
+
 
 def parse_result(result):
     """Converts game result to numeric format."""

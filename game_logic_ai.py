@@ -6,7 +6,7 @@ def play_game_aivai(net):
     board = chess.Board()
     game_data = []
     while not board.is_game_over():
-        print(board)
+        #print(board)
         root = MCTSNode(board.copy())
         best_move_node = mcts(root, net, iterations=100)
         best_move = best_move_node.state.peek()

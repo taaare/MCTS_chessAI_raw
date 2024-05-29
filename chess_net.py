@@ -11,6 +11,8 @@ class ChessNet(nn.Module):
         self.fc3 = nn.Linear(64, 1)     # Third layer: 64 inputs, 1 output
 
     def forward(self, x):
+        if isinstance(x, tuple):
+            x = x[0]  # Ensure x is a tensor, not a tuple
         x = x.view(-1, 769)  # Ensure the input tensor is correctly reshaped to match the first layer's input size
         x = torch.relu(self.fc1(x))
         x = torch.relu(self.fc2(x))
