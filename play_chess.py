@@ -1,11 +1,15 @@
 import chess
-from chess_net import net
+from self_train import ChessNet, self_play_and_train
 from MCTS import MCTSNode, mcts
+from tensor_utils import state_to_tensor
+from game_logic_ai import play_game_aivai
+import torch
 
-# Initialize the board
+#initialize the board
 board = chess.Board()
 
 def play_game():
+    #for users to play against the computer
     while not board.is_game_over():
         print(board)
         if board.turn == chess.WHITE:
@@ -33,8 +37,9 @@ def play_game():
             board.push(best_move)
             #print(f"Computer move: {board.san(best_move)}")
 
-    print("Game over.")
-    print(board.result())
-
 if __name__ == "__main__":
-    play_game()
+    net = ChessNet()
+    self_play_and_train(net, games=1, training_cycles=1)
+
+
+

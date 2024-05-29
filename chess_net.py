@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import random
 
 class ChessNet(nn.Module):
     def __init__(self):
@@ -16,7 +17,3 @@ class ChessNet(nn.Module):
         x = torch.sigmoid(self.fc3(x))  # Sigmoid to output a probability (useful for binary classification or similar tasks)
         return x
 
-# Initialize the network, loss function, and optimizer
-net = ChessNet()
-criterion = nn.BCELoss()
-optimizer = optim.Adam(net.parameters(), lr=0.001)
