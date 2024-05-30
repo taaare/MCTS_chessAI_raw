@@ -1,6 +1,6 @@
 ### Monte Carlo Search Tree Simple NN
 
-This was done as a simple project made from scratch to help me understand pytorch on a foundational basis and uses a Monte Carlo Search Tree to make moves.  The neural network is used to evaluate chess positions and guide the MCTS in choosing the most promising moves during gameplay. This project is designed as a basic framework to demonstrate the integration of MCTS with a machine learning model in a chess engine.
+This was done as a simple project made from scratch to help me understand pytorch on a foundational basis and uses a Monte Carlo Tree Search to make moves.  The neural network is used to evaluate chess positions and guide the MCTS in choosing the most promising moves during gameplay. This project is designed as a basic framework to demonstrate the integration of MCTS with a machine learning model in a chess engine.
 
 Most recently, I have added the capability for the model to train by playing itself. I need to implement CUDA utilization, or send the compute to the cloud. Currently runs on CPU. 
 
