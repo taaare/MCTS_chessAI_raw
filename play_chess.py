@@ -39,7 +39,7 @@ def play_game():
 
 if __name__ == "__main__":
     net = ChessNet()
-    self_play_and_train(net, games=1, training_cycles=1)
-
+    #self_play_and_train(net, games=1, training_cycles=1)
+    play_game()
 
 
