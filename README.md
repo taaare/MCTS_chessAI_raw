@@ -4,6 +4,10 @@ This was done as a simple project made from scratch to help me understand pytorc
 
 Most recently, I have added the capability for the model to train by playing itself. I need to implement CUDA utilization, or send the compute to the cloud. Currently runs on CPU. 
 
+## TODO
+
+Adjust parameters, run on CUDA cores for training
+
 ## Features 
 
 Chess Game Simulation: Play against the AI in a command-line interface.
