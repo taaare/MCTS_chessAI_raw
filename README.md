@@ -19,4 +19,4 @@ Neural Network architecture: MLP -> input: 768 | hidden: 256 | hidden: 64 | outp
 
 Optimizer: Adam
 
-NO TRAINING DATA - Monte Carlo Search Probabilities ONLY 
+NO TRAINING DATA YET - Monte Carlo Search Probabilities ONLY 
